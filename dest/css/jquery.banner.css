@@ -1,0 +1,86 @@
+/*这里是开发人员编写的css*/
+.myBanner-container{
+	height: 750px;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+.myBanner-wrapper{
+	width: 1120px;
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+}
+.myBanner-item{
+	width: 1120px;
+	height: 400px;
+	position: absolute;
+	text-align: center;
+	line-height: 400px;
+	font-size: 100px;
+	background: #fff;
+	box-sizing: border-box;
+	/*border: 5px solid #000;*/
+}
+.myBanner-item.myBanner-active{
+	z-index: 2;
+}
+/*-----分页器------*/
+.myBanner-pagination{
+	width: 1198px;
+	height: 150px;
+	z-index: 999;
+	background: red;
+	margin: 0 auto;
+	position: absolute;
+	top: 450px;
+}
+.myBanner-pagination .extra-wrapper{
+	display: inline-block;
+	height: 219px;
+	width: 110px;
+	float: left;
+	margin:20px 0;
+	padding: 0 10px;
+
+}
+.myBanner-pagination .extra-wrapper.myBanner-active{
+	position: absolute;
+	width: 220px;
+	height: 110px;
+	background: rgba(0,0,0,.3);
+	z-index: 999;
+	top: 0;
+	left: 10px;
+}
+.myBanner-pagination .extra-wrapper:first-child{
+	position: absolute;
+	width: 220px;
+	height: 110px;
+	background: rgba(0,0,0,0);
+	z-index: 999;
+	top: 0;
+	left: 10px;
+}
+/*左右按钮*/
+.myBanner-prev,.myBanner-next{
+	height: 60px;
+	width: 40px;
+	background: red;
+	position: absolute;
+	z-index: 999;
+}
+.myBanner-prev{
+	left: 0;
+	top:50%;
+	margin-top: -30px;
+}
+.myBanner-next{
+	right: 0;
+	top: 50%;
+	margin-top: -30px;
+}
+
+
+
+

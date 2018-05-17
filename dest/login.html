@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会员登录</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <div id="logo">
+       <div id="logo_center">
+           <h1></h1>
+       </div>
+    </div>
+    <div id="middle" class="clear">
+        <a href="index.html"><img src="img/login_banner.jpg" alt=""></a>
+        <div id="middle_login">
+            <div id="login_item">
+                <h3 class="item1 active">账号登录</h3>
+                <h3 class="item2">手机登录</h3>
+                <h3 class="item3">卡登录</h3>
+            </div>
+            <div id="login_form">
+                <div id="login_check">
+                    <form action="">
+                        <div class="username">
+                            <span class="form_title title_user">用户名:</span>
+                            <input type="text" class="form_input" name="user" id="id_user">
+                            <!-- 新增提示信息 -->
+                            <div class="error_user">
+                                <span class="tips" id="tip_username">请输入账户或邮箱地址</span><span id="error_username">用户名或密码错误！</span><span id="error_checkCode">验证码错误</span>
+                            </div>
+                            <!-- 新增提示信息 end -->
+                        </div>
+                        <div class="password">
+                            <span class="form_title title_pwd">登录密码：</span>
+                            <input type="text" class="form_input" name="psw"  id="id_pwd">
+                            <!-- 新增提示信息 -->
+                            <div class="error_pwd">
+                                <span class="tips" id="tip_pwd">请输入密码</span>
+                            </div>
+                            <!-- 新增提示信息 end -->
+                        </div>
+                        <div class="verifyText">
+                            <span class="form_title title_cCode" >验证码：</span>
+                            <input type="text" class="verify_input" name="verify" id="id_verify">
+                            <!-- 新增提示信息 -->
+                            <div class="error_cCode">
+                                <span class="tips" id="tip_pwd">请输入密码</span>
+                            </div>
+                            <!-- 新增提示信息 end -->
+                            <div class="verify_pic">
+                                <img src="img/loginCode.jpg" alt="">
+                            </div>
+                            <span class="form_change"><a href="#">换一张</a></span>
+                        </div>
+                        <div class="remember">
+                               <div class="remember_center">
+                                   <input type="checkbox" id="rememberUserName" checked="checked" name="rememberUserName" class="checkbox1">
+                                    <label for="rememberUserName">记住用户名</label>
+                                    <input type="checkbox" id="rememberPassword" name="rememberPassword" class="checkbox1">
+                                    <label for="rememberPassword">自动登录</label>
+                               </div>
+                        </div>
+                        <div class="login">
+                            <div id="login_button">
+                                <span><a href="#">登 录</a></span>
+                            </div>
+                            <i><a href="#">找回密码？</a></i>
+                        </div>
+                    </form>
+                </div>
+                <div class="bottom clear">
+                    <span>还不是邦购网用户？马上加入吧~~~</span>
+                    <span><a href="register.html">免费注册>></a></span>
+                </div>
+                <div class="login_support clear">
+                    <h4>或者使用合作网站登录：</h4>
+                    <a class="icon_qq" href="http://bgact.banggo.com/Unionlogin/Authorize?from=qq">QQ</a>
+                    <a class="icon_alipay" href="http://bgact.banggo.com/Unionlogin/Authorize?from=alipay">支付宝</a>
+                    <a class="icon_wechat" href="http://m.banggo.com/Api/wxLogin">微信</a>
+                    <a href="#"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="log_bottom">
+        美特斯邦威集团网站：
+        <a href="http://www.metersbonwe.com/">美特斯邦威</a> |
+        <a href="http://www.me-city.com/">ME&CITY</a> |
+        <a href="http://www.chincn.com/">CH'IN祺</a> |
+        <a href="http://www.banggo.com">邦购网</a>
+    </div>
+    
+    <script src="libs/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $login_item = $("#login_item").children();
+            $user_text = [
+                        {
+                            "user":"用户名：",
+                            "pwd":"登录密码："
+                        },
+                        {
+                            "user":"手机号：",
+                            "pwd":"登录密码："
+                        },
+                        {
+                            "user":"卡 号：",
+                            "pwd":"卡密码："
+                        }
+                    ];
+            $login_item.each(function() {
+                $(this).on("click",function (index,el) {
+                    $index = index;
+                    for(var i = 0 ; i < $login_item.length ; i ++){
+                        $login_item.removeClass("active");
+                    }
+                    $(this).addClass(" active");
+                    
+                    var guidIndex = index.handleObj.guid;
+                    switch(guidIndex){
+                        case 1 :
+                            $(".title_user").html($user_text[0].user);
+                            $(".title_pwd").html($user_text[0].pwd);
+                            break;
+                        case 2 :
+                            $(".title_user").html($user_text[1].user);
+                            $(".title_pwd").html($user_text[1].pwd);
+                            break;
+                        case 3:
+                            $(".title_user").html($user_text[2].user);
+                            $(".title_pwd").html($user_text[2].pwd);
+                            break;
+                    }                    
+                }.bind(this),);
+            });
+           $('input[id="id_user"]').click(function () {
+              // console.log(1); 
+              $("#tip_username").show();
+           });
+        })
+    </script>
+</body>
+</html>
