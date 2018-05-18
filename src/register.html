@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>会员注册</title>
+	<link rel="stylesheet" href="css/register.css">
+	<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+	<div id="logo">
+       <div id="logo_center">
+           <h1></h1>
+       </div>
+    </div>
+    <div id="center">
+    	<div id="mobile">
+    		<a href="##">手机注册</a>
+    	</div>
+    	<div id="content" class="clear">
+	    	<div id="form_div">
+	    		<p id="step1">第一步：填写手机账户信息（以下内容均为必填）</p>
+	    		<form>
+	    			<div class="step1_user clear">
+	    				<span class="step1_title">用户名：</span>
+	    				<input type="text" name="username" id="step1_username">
+	    				<span class="tips">4-20个字符，一个汉字为两个字符，推荐使用中文会会员名字。一旦注册成功会员名将不能修改。</span>
+						<span id="mobile_user_message" class="errorInfo"></span>
+	    			</div>
+	    			<div class="step1_pwd clear">
+	    				<span class="step1_title">手机号码：</span>
+	    				<input type="text" name="username" id="step1_phoneNum">
+	    				<span class="tips">请输入您的手机号码。</span>
+						<span id="mobile_user_phoneNum" class="errorInfo"></span>
+	    			</div>
+	    			<div class="step1_pwd clear">
+	    				<span class="step1_title">验证码：</span>
+	    				<input type="text" name="username" id="step1_checkCode">
+	    				<img src="https://passport.banggo.com:443/CASServer//custom/loginCode.do">
+						<span id="mobile_user_phoneNum" class="errorInfo"></span>
+	    			</div>
+	    		</form>
+	    	</div>
+    	</div>
+    </div>
+</body>
+</html>

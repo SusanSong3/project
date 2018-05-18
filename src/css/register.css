@@ -1,0 +1,140 @@
+一个公用的头部*/
+#logo{
+	width: 100%;
+	height: 100px;
+}
+#logo_center{
+	margin: 0 auto;
+	height: 100px;
+	width: 980px;
+}
+#logo_center h1{
+	background: url(../img/logo.jpg) no-repeat;
+	width: 220px;
+	height: 100px;
+}
+/*-------center-------*/
+#center{
+	width: 1440px;
+	height: 600px;
+	background: white;
+}
+#mobile{
+	margin: 0 auto;
+	width: 980px;
+	height: 26px;
+	background: white;
+	cursor: pointer;
+	border-bottom: 2px solid #6E6E6E;
+}
+#mobile a{
+	height: 26px;
+	margin-top: 0;
+	font-weight: bold;
+	line-height: 26px;
+	background-position: 0 -450px;
+	background: url(../img/buttonSkin.png) 0 -450px no-repeat;
+	color: #FFF;
+	float: left;
+	width: 160px;
+	text-align: center;
+}
+#content{
+	width: 982px;
+	height: 500px;
+	background: white;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	margin-top: 10px;
+}
+#form_div{
+	width: 743px;
+	padding: 20px 0 30px 15px;
+	background: white;
+	height: 267px;
+	float: left;
+}
+/*-----step 1 ------*/
+#step1{
+	width: 700px;
+	font-size: 14px;
+	text-indent: 20px;
+	line-height: 30px;
+	margin-left: 15px;
+	border-bottom: 1px dotted #E6E6E6;
+}
+.step1_user{
+	margin-top: 15px;
+	padding-top: 10px;
+	width: 700px;
+	background: white;
+}
+.step1_title{
+	width: 120px;
+	line-height: 30px;
+	height: 30px;
+	float: left;
+	font-size: 14px;
+	color: #666;
+	text-align: right;
+	margin-right: 5px;
+}
+#step1_username,#step1_phoneNum{
+	border: 1px solid #ABABAB;
+	width: 240px;
+	height: 28px;
+	line-height: 28px;
+	padding-right: 5px;
+	margin-right: 10px;
+	background-image: url(../img/iconSkin.png);
+	background-position: 0 -700px;
+	background-repeat: repeat-x;
+	float: left;
+}
+#step1_checkCode{
+	border: 1px solid #ABABAB;
+	width: 120px;
+	height: 28px;
+	line-height: 28px;
+	padding-right: 5px;
+	margin-right: 10px;
+	background-image: url(../img/iconSkin.png);
+	background-position: 0 -700px;
+	background-repeat: repeat-x;
+	float: left;
+}
+.tips{
+	width: 305px;
+    margin-top: -2px;
+    display: inline-block;
+    color: #999;
+	float: left;
+	font-size: 12px;
+}
+.errorInfo{
+	height: 20px;
+	color: #F60;
+	display: block;
+	line-height: 20px;
+	font-size: 12px;
+	background: white;
+	width: 567px;
+	float: left;
+	margin-left: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -21,9 +21,11 @@
 .username{margin-top: 30px;}
 
 /*---error-message start---*/
-.error_user,.error_pwd{height: 20px;width: 220px;padding-left: 80px;font-size: 14px;}
-#tip_username,#tip_pwd{color: #999;display: none;}
-#error_username,#error_checkCode{color: #c00;display:none;}
+.error_user,.error_pwd,.error_cCode{height: 20px;width: 220px;padding-left: 80px;font-size: 14px;}
+#tip_username,#tip_pwd,#tip_verify{color: #999;}
+#error_username{color: #c00;display:none;}
+.tips{display: none;}
+#error_checkCode{color: #c00;display:none;}
 /*---error-message end---*/
 
 .verifyText{position: relative;height: 52px;}

@@ -23,30 +23,30 @@
             <div id="login_form">
                 <div id="login_check">
                     <form action="">
-                        <div class="username">
-                            <span class="form_title title_user">用户名:</span>
-                            <input type="text" class="form_input" name="user" id="id_user">
+                        <div class="username choice">
+                            <span class="form_title title_user">用户名：</span>
+                            <input type="text" class="form_input" id="id_user">
                             <!-- 新增提示信息 -->
                             <div class="error_user">
                                 <span class="tips" id="tip_username">请输入账户或邮箱地址</span><span id="error_username">用户名或密码错误！</span><span id="error_checkCode">验证码错误</span>
                             </div>
                             <!-- 新增提示信息 end -->
                         </div>
-                        <div class="password">
+                        <div class="password choice">
                             <span class="form_title title_pwd">登录密码：</span>
-                            <input type="text" class="form_input" name="psw"  id="id_pwd">
+                            <input type="text" class="form_input" id="id_pwd">
                             <!-- 新增提示信息 -->
                             <div class="error_pwd">
                                 <span class="tips" id="tip_pwd">请输入密码</span>
                             </div>
                             <!-- 新增提示信息 end -->
                         </div>
-                        <div class="verifyText">
+                        <div class="verifyText choice">
                             <span class="form_title title_cCode" >验证码：</span>
-                            <input type="text" class="verify_input" name="verify" id="id_verify">
+                            <input type="text" class="verify_input" id="id_verify">
                             <!-- 新增提示信息 -->
                             <div class="error_cCode">
-                                <span class="tips" id="tip_pwd">请输入密码</span>
+                                <span class="tips" id="tip_verify">请输入验证码</span>
                             </div>
                             <!-- 新增提示信息 end -->
                             <div class="verify_pic">
@@ -72,7 +72,7 @@
                 </div>
                 <div class="bottom clear">
                     <span>还不是邦购网用户？马上加入吧~~~</span>
-                    <span><a href="register.html">免费注册>></a></span>
+                    <span><a href="file:///Users/SusanSong3/GoodGrogrammer/JavaScript/project/src/register.html">免费注册>></a></span>
                 </div>
                 <div class="login_support clear">
                     <h4>或者使用合作网站登录：</h4>
@@ -93,23 +93,42 @@
     </div>
     
     <script src="libs/jquery-3.3.1.js"></script>
-    <script type="text/javascript">
+   <script>
         $(function () {
+            //选中每个选项卡
             $login_item = $("#login_item").children();
-            $user_text = [
-                        {
-                            "user":"用户名：",
-                            "pwd":"登录密码："
-                        },
-                        {
-                            "user":"手机号：",
-                            "pwd":"登录密码："
-                        },
-                        {
-                            "user":"卡 号：",
-                            "pwd":"卡密码："
-                        }
-                    ];
+            //根据点击的选项卡 选择显示的提示信息
+  
+            // $user_name = $(".username").find("input");
+            // $password = $(".password").find("input");
+            // =====> $user_name && $password verified;
+
+            //策略模式的应用：
+            var guidIndex = {
+                "1":function () {
+                    $(".title_user").html("用户名：");
+                    $(".title_pwd").html("登录密码：");
+                    $(".username:input").replaceWith('<input type="text" class="form_input" id="id_user">');
+                    $(".password:input").replaceWith('<input type="text" class="form_input" id="id_pwd">');
+                    $("#id_user").next().find(".tips").html('请输入账户或邮箱地址');
+                },
+                "2":function () {
+                    $(".title_user").html("手机号：");
+                    $(".title_pwd").html("登录密码：");
+                    $(".username:input").replaceWith('<input type="text" class="form_input" id="phone_user">');   
+                    $(".password:input").replaceWith('<input type="text" class="form_input" id="phone_pwd">');
+                    $("#id_user").next().find(".tips").html('请输入手机号');
+                },
+                "3":function () {
+                    $(".title_user").html("卡 号：");
+                    $(".title_pwd").html("卡密码：");
+                    $(".username:input").replaceWith('<input type="text" class="form_input" id="card_user">');
+                    $(".password:input").replaceWith('<input type="text" class="form_input" id="card_pwd">');
+                    $("#id_user").next().find(".tips").html('请输入卡号');
+
+                }
+            }
+            //每个选项卡
             $login_item.each(function() {
                 $(this).on("click",function (index,el) {
                     $index = index;
@@ -117,29 +136,27 @@
                         $login_item.removeClass("active");
                     }
                     $(this).addClass(" active");
-                    
-                    var guidIndex = index.handleObj.guid;
-                    switch(guidIndex){
-                        case 1 :
-                            $(".title_user").html($user_text[0].user);
-                            $(".title_pwd").html($user_text[0].pwd);
-                            break;
-                        case 2 :
-                            $(".title_user").html($user_text[1].user);
-                            $(".title_pwd").html($user_text[1].pwd);
-                            break;
-                        case 3:
-                            $(".title_user").html($user_text[2].user);
-                            $(".title_pwd").html($user_text[2].pwd);
-                            break;
-                    }                    
-                }.bind(this),);
+                    //替换每个选项卡的文字和input；
+                    guidIndex[index.handleObj.guid]();
+
+                }.bind(this));
             });
-           $('input[id="id_user"]').click(function () {
-              // console.log(1); 
-              $("#tip_username").show();
-           });
+             //每个输入框的提示信息；
+  
+                //3个input
+            $(".choice").find("input").focus(function () {
+                $(".tips").hide();
+                $(this).next().find(".tips").show();
+
+            }).blur(function () {
+                $(".tips").hide();
+            })
+
+            
+
         })
-    </script>
+
+   </script>
+        
 </body>
 </html>

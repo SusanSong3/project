@@ -9,7 +9,7 @@ const imagemin = require('gulp-imagemin');
 gulp.task('connect', () => {
     connect.server({
         root: 'dest',
-        port: 3306,
+        port: 8888,
         livereload: true
     })
 });
@@ -34,24 +34,34 @@ gulp.task('sass', () => {
 // js压缩
 gulp.task('compress', function (cb) {
     pump([
-          gulp.src('./src/libs/*.js'),
+          gulp.src(['./src/libs/*.js']),
           uglify(),
-          gulp.dest('./dest/libs')
+          gulp.dest('./dest/libs'),
       ],
-      cb
-    );
+      [
+          gulp.src(['./src/module/*.js']),
+          uglify(),
+          gulp.dest('./dest/module'),
+      ],function () {
+          connect.reload()
+      });
+   
+
 });
 // img压缩
 gulp.task('imagemin', () => 
     gulp.src('./src/img/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./dest/img'))
+        .pipe(connect.reload())
 );
 // html watch
 gulp.task('watch', () => {
     gulp.watch(['./src/*.html'], ['html']),
     gulp.watch(['./src/css/*.css'], ['css']),
-    gulp.watch(['./src/img/*'], ['img'])
+    gulp.watch(['./src/img/*'], ['imagemin']),
+    gulp.watch(['./src/**/*.js'], ['compress'])
+
 });
 // sass watch
 gulp.task('sass:watch', () => {
