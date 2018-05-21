@@ -26,6 +26,7 @@
 	z-index: 2;
 }
 /*-----分页器------*/
+/*
 .myBanner-pagination{
 	width: 1198px;
 	height: 150px;
@@ -62,7 +63,9 @@
 	top: 0;
 	left: 10px;
 }
+*/
 /*左右按钮*/
+/*
 .myBanner-prev,.myBanner-next{
 	height: 60px;
 	width: 40px;
@@ -80,6 +83,7 @@
 	top: 50%;
 	margin-top: -30px;
 }
+*/
 
 
 

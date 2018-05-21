@@ -1,8 +1,9 @@
 requirejs.config({
-    baseUrl:"src",
     paths:{
-        "myjquery":"libs/jquery-3.3.1",
-        "banner":"libs/jquery.banner",
-        "hover":"libs/jquery.hover"
+        "jquery":"./libs/jquery-3.3.1",
+        "banner":"./libs/jquery.banner",
+        "index":"./module/index",
+        "list":"./module/list",
+        // "hover":"./src/libs/jquery.hover"
     }
 })

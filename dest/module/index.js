@@ -1,1 +1,0 @@
-define(["hover","banner","myjquery"],function(n,e){console.log(n,e),n.init("#logo_pic"),$(".myBanner-container").myBanner(".myBanner-wrapper",{navigation:{nextEl:".myBanner-next",prevEl:".myBanner-prev"},pagination:{el:".myBanner-pagination"},direction:"scroll",loop:!0})});

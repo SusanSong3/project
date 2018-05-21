@@ -34,19 +34,11 @@ gulp.task('sass', () => {
 // js压缩
 gulp.task('compress', function (cb) {
     pump([
-          gulp.src(['./src/libs/*.js']),
+          gulp.src(['./src/**/*.js']),
           uglify(),
           gulp.dest('./dest/libs'),
-      ],
-      [
-          gulp.src(['./src/module/*.js']),
-          uglify(),
-          gulp.dest('./dest/module'),
-      ],function () {
-          connect.reload()
-      });
-   
-
+      ],cb
+      );
 });
 // img压缩
 gulp.task('imagemin', () => 

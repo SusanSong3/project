@@ -7,11 +7,13 @@
 	<link rel="stylesheet" href="css/common.css">
 </head>
 <body>
+	<!-- 公用头部 logo -->
 	<div id="logo">
        <div id="logo_center">
            <h1></h1>
        </div>
     </div>
+    <!-- 中间注册功能主体部分 -->
     <div id="center">
     	<div id="mobile">
     		<a href="##">手机注册</a>
@@ -20,27 +22,127 @@
 	    	<div id="form_div">
 	    		<p id="step1">第一步：填写手机账户信息（以下内容均为必填）</p>
 	    		<form>
+	    			<!-- 用户名 -->
 	    			<div class="step1_user clear">
 	    				<span class="step1_title">用户名：</span>
 	    				<input type="text" name="username" id="step1_username">
 	    				<span class="tips">4-20个字符，一个汉字为两个字符，推荐使用中文会会员名字。一旦注册成功会员名将不能修改。</span>
 						<span id="mobile_user_message" class="errorInfo"></span>
 	    			</div>
+	    			<!-- 手机号 -->
 	    			<div class="step1_pwd clear">
 	    				<span class="step1_title">手机号码：</span>
 	    				<input type="text" name="username" id="step1_phoneNum">
 	    				<span class="tips">请输入您的手机号码。</span>
 						<span id="mobile_user_phoneNum" class="errorInfo"></span>
 	    			</div>
-	    			<div class="step1_pwd clear">
+	    			<!-- 发送验证码 -->
+	    			<div class="step1_cCode clear">
 	    				<span class="step1_title">验证码：</span>
 	    				<input type="text" name="username" id="step1_checkCode">
-	    				<img src="https://passport.banggo.com:443/CASServer//custom/loginCode.do">
-						<span id="mobile_user_phoneNum" class="errorInfo"></span>
+	    				<img src="https://passport.banggo.com:443/CASServer//custom/loginCode.do" id="checkCode">
+	    				<a href="###" id="changeCode">换一张</a>
+						<span id="mobile_checkCode" class="errorInfo"></span>
+	    			</div>
+	    			<!-- 按钮 发送验证码 -->
+	    			<div class="setp1_sendcCode">
+	    				<a id="sendcCode"></a>
 	    			</div>
 	    		</form>
 	    	</div>
+	    	<!-- 右侧 欢迎图片 -->
+	    	<div id="right">
+				<img src="img/bgowelcometext.png">
+    		</div>
     	</div>
     </div>
+   	<script src="libs/jquery-3.3.1.js"></script>
+   	<script type="text/javascript">
+   		$(function () {
+   			//提示信息：三项输入均不能为空
+   			//正则：数字字母下划线汉字
+   			$reg_user = new RegExp(/^[a-zA-Z0-9]{4,20}|[\u4e00-\u9fa5]{2,10}$/);
+   			$reg_phone = new RegExp(/^[0-9]{11}$/g);
+   			//---> 用户名
+   			$("#step1_username").focus(function () {
+   				// console.log("no username")
+   			}).blur(function () {
+   				
+   				$username = $(this).val() ;
+   				$userNum = lenReg($username);
+   				if($username === ""){
+   					$("#mobile_user_message")
+   					.html("用户名不能为空");
+   				}
+				if(!!$reg_user.test($username)){
+					$("#mobile_user_message")
+					.html("")
+					.append("<font color='green'>用户名可用</font>")
+   				}else{
+   					$("#mobile_user_message")
+ 					.html("")
+   					.html("以中、英文开头，与数字、下划线组成");
+   				}
+   				if($userNum > 20 || $userNum < 4){
+   					$("#mobile_user_message")
+ 					.html("")
+   					.html("用户名只能为4~20个字符,一个汉字为两个字符");
+   					return false;
+   				}
+   
+   			})
+   			//---> 手机号
+   			$("#step1_phoneNum").focus(function () {
+   				// console.log("no phoneNum")
+   			}).blur(function () {
+   				
+   				$phone = $(this).val() ;
+   				$phoneNum = lenReg($phone);
+   				if($phone === ""){
+   					$("#mobile_user_phoneNum")
+   					.html("")
+   					.html("手机号不能为空");
+   				}
+				if(!$reg_phone.test($phone)){
+					$("#mobile_user_phoneNum")
+					.html("")
+					.html("手机号码不合法！");
+   					return false;
+   				}else{
+   					$("#mobile_user_phoneNum")
+					.html("");
+   				}
+   			})
+   			//---> 验证码
+   			$("#step1_checkCode").focus(function () {
+   				// console.log("no checkCode")
+   			}).blur(function () {
+   				$cCode = $(this).val();
+
+   				if($cCode.val() === ""){
+   					$("#mobile_checkCode")
+   					.html("")
+   					.html("验证码不能为空");
+   				}
+   				if($cCode !== "UJYM"){
+   					$("#mobile_checkCode")
+   					.html("")
+   					.html("验证码错误");
+   				}
+   			})
+
+   			$("#changeCode").on("click",function () {
+   				location.reload();
+   			})
+   		})
+   		var lenReg = function(str){ 
+     		return str.replace(/[^\x00-\xFF]/g,'**').length; 
+    	}; 
+    	//提示错误信息
+    	function showError(str,color) {
+    		if(!str || !color) return;
+
+    	}
+   	</script>
 </body>
 </html>

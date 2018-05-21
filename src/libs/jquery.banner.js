@@ -16,26 +16,25 @@
 			el:".myBanner-pagination"
 		}
 	}
-1、初始化组件
-2、创建元素
-3、做动画功能：滑动、淡入淡出、滚动
-4、下标处理
 
 */
-define(["myjquery"],function () {
-	
-;+function ($) {
-	$.fn.myBanner = function (banner_selector,options) {
-		//单例模式：每次操作都要独立；
-		new Banner(banner_selector,options);
-	}
+;+function(factory){
+    //AMD判断;
+    if(typeof define === "function" && define.amd){
+       define(["jquery"],factory)
+    }else{
+        factory(jQuery);
+    }
+}(function($){
 	function Banner(banner_selector,options) {
-		this.init(banner_selector,options);//base_ele 是源自哪里；
+        
+		this.init(banner_selector,options);
 	}
 	Banner.prototype = {
-		construtor:Banner,
-		init:function (banner_selector,options) {
+		constructor:Banner,
+		init:function(banner_selector,options) {
 			//当前显示元素的下标；
+            console.log("linked");
 			this.index = 0 ;
 			//主体元素选择
 			this.bannerWrapper = $(banner_selector)
@@ -43,14 +42,6 @@ define(["myjquery"],function () {
 			this.bannerItem = this.bannerWrapper.children();
 			//动画模式 默认的动画模式为： 淡入淡出
 			this.direction = options.direction ? options.direction : "fade";
-
-			//随机颜色
-			this.bannerItem.css("background",function () {
-				var r = Math.round(Math.random() * 255);
-				var g = Math.round(Math.random() * 255);
-				var b = Math.round(Math.random() * 255);
-				return `rgb(${r},${g},${b})`;
-			})
 
 			this.bannerNum = this.bannerItem.length;
 			//判断 分页器 是否有有参数传入
@@ -91,7 +82,7 @@ define(["myjquery"],function () {
 
 			this.animation.moving = false;
 		},
-		change_index:function (event){
+		change_index:function(event){
 			if(this.animation.moving){
 				return;
 			}
@@ -118,12 +109,17 @@ define(["myjquery"],function () {
 				"toIndex":function () {
 					this.prev = this.index;
 					this.index = $(event.target).index();
-				}.bind(this)
+				}.bind(this),
+			};
+
+			var direction = turnList[event.data.turn];
+			if(typeof direction == "function"){
+				return ;
 			}
-			if(!(typeof turnList[event.data.turn] == "function")) return 0 ;
+
 			turnList[event.data.turn]();
 		},
-		animation:function (event) {
+		animation:function(event) {
 			if(this.animation.moving){
 				return;//当正在运动的时候 ，不执行这个函数；
 			}
@@ -214,16 +210,18 @@ define(["myjquery"],function () {
 					.css({
 						zIndex:""
 					})
-				}.bind(this)
-			}
+				}.bind(this),
+			};
 			this.animation.moving = true;
 			animationList[this.direction]();
 			this.pagination.children().eq(this.index)
 			.addClass("myBanner-active")
 			.siblings()
-			.removeClass("myBanner-active")
+			.removeClass("myBanner-active");
 		}
 	}
-}(jQuery);
-	
-})
+
+	$banner = Banner;
+	return Banner;
+});
+// })
