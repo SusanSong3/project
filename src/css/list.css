@@ -24,3 +24,10 @@
 .second_search{
     display: inline;
 }
+.second_input{
+    display: block;
+    height: 20px;
+    width: 100px;
+    float: left;
+    padding: 2px 5px;
+}
