@@ -4,6 +4,7 @@ requirejs.config({
         "banner":"./libs/jquery.banner",
         "index":"./module/index",
         "list":"./module/list",
+        "pagination":"./libs/jquery.pagination"
         // "hover":"./src/libs/jquery.hover"
     }
 })

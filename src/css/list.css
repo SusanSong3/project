@@ -1,33 +1,554 @@
 #content{
     width: 100%;
     height: auto;
-    background: pink;
+    background: white;
 }
 #list_bar{
     width: 1200px;
     height: 28px;
-    background: red;
+    background: white;
     margin: 15px auto 5px;
-    
+    font-size: 12px;
 }
 .bread_nav{
     width: auto;
     height: 28px;
-    float: left;
     line-height: 28px;
-    padding-left: 5px;
 
+    float: left;
+    background: white;
+    overflow: hidden;
 }
 .bread_nav a{
-        cursor: pointer;
+    cursor: pointer;
 }
-.second_search{
-    display: inline;
-}
-.second_input{
-    display: block;
-    height: 20px;
-    width: 100px;
+/*二级搜索*/
+
+.sec_search{
+    margin-left: 10px;
+    width: auto;
+    height: auto;
+    border: 1px solid #ccc;
+    background: white;
     float: left;
-    padding: 2px 5px;
 }
+#sec_input{
+    width: 100px;
+    height: 20px;
+    background: white;
+}
+#sec_icon{
+    width: 20px;
+    height: 20px;
+    background: url(../img/Veo_mbshop_spirit_pic.png) no-repeat 0 -372px;
+    margin-top: 3px;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+}
+/*-----主体-----*/
+.shop_container{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.shop_left{
+    width: 180px;
+    height: auto;
+    margin-top: 10px;
+    margin-right: 40px;
+    float: left;
+}
+.shop_nav_box{
+    width: 180px;
+    height: auto;
+}
+.shop_nav_box h1{
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+.shop_nav_box ul{
+    width: 180px;
+    height: auto;
+    font-size: 12px;
+    padding-top: 7px;
+}
+.shop_nav_box ul li{
+    line-height: 18px;
+    margin-top: 7px;
+}
+.shop_nav_box ul li a {
+    margin-top: 7px;
+    line-height: 18px;
+
+}
+.shop_nav_box ul li em{
+    margin-top: 4px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    width: 8px;
+    height: 10px;
+    background: url(../img/Veo_mbshop_spirit_pic.png) no-repeat -8px -92px;
+}
+
+
+/*---- 分类搜索------*/
+.shop_right{
+    width: 980px;
+    background: white;
+    height: 4000px;
+    float: left;
+}
+#shop_top{
+    width: 978px;
+    height: 172px;
+    border: 1px solid #ccc;
+    z-index: 0;
+}
+.search_frame{
+    width: 950px;
+    height: 124px;
+    padding-bottom: 10px;
+}
+
+.line1_brand,.line2_price,.line3_size,.line4_sex{
+    width: 950px;
+    height: 21px;
+    margin: 10px 0 0 20px;
+    font-size: 14px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+.shop_search_title{
+    width: 50px;
+    float: left;
+    line-height: 18px;
+    border-right: 1px solid #ccc;
+    display: block;
+    font-weight: normal;
+    background: white;
+}
+.line1_brand ul,.line2_price ul,.line4_sex ul{
+    float: left;
+    overflow: hidden;
+    width: 818px;
+    height: 21px;
+}
+.line3_size ul{
+    float: left;
+    overflow: hidden;
+    width: 818px;
+    height: auto;
+
+}
+.line1_brand ul li a,.line2_price ul li a,.line3_size ul li a,.line4_sex ul li a{
+    float: left;
+    display: inline-block;
+    margin: 0 0 10px 20px;
+    line-height: 18px;
+    width: auto;
+}
+.shop_price_area{
+    width: 170px;
+    height: auto;
+    color: #333;
+    margin-left: 40px;
+    float: left;
+    overflow: hidden;
+}
+.shop_price_area span{
+    display: inline-block;
+    float: left;
+    width: 16px;
+    text-align: center;
+}
+#start_price,#end_price{
+    width: 35px;
+    height: 13px;
+    border:1px solid #ccc;
+    text-align: center;
+    display: block;
+    padding: 2px 5px;
+    float: left;
+}
+#submit_price{
+    width: 45px;
+    height: 19px;
+    border: 1px solid #CCC;
+    color: #000;
+    background-color: #F5F5F5;
+    text-align: center;
+    float: left;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+/*    更多按钮    */
+.brand_more{
+    width: 50px;
+    height: 18px;
+    float:left;
+     background: url(../img/Veo_mbshop_spirit_pic.png) no-repeat 33px -253px;
+    position: absolute;
+    right: 40px;
+    top: 0;
+}
+.brand_more a {
+    width: 50px;
+    height: auto;
+}
+.brand_close{
+    width: 50px;
+    height: 18px;
+    float:left;
+     background: url(../img/Veo_mbshop_spirit_pic.png) no-repeat 33px -228px;
+    position: absolute;
+    right: 40px;
+    top: 0;
+}
+
+/*------高级筛选-------*/
+.line5_upperSearch{
+    width: 978px;
+    height: 36px;
+    position: relative;
+    top: 0px;
+    padding-bottom: 10px;
+}
+#upper_search{
+    width: 70px;
+    height: 20px;
+    display: block;
+    font-size: 14px;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 7px;
+}
+.class_bar{
+    width: 92px;
+    height: 26px;
+    display: block;
+    float: left;
+    position: absolute;
+    top: 0;
+}
+.class_one{
+    left: 90px;
+}
+.class_two{
+    left: 200px;
+}
+.class_three{
+    left: 310px;
+}
+.class_four{
+    left: 420px;
+}
+.upper_search_menu{
+    width: 55px;
+    height: 22px;
+    padding: 3px 25px 2px 10px;
+    display: block;
+    background: url(../img/Veo_mbshop_spirit_pic.png) no-repeat 77px -66px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #B5B5B5;
+    border-radius: 3px;
+
+}
+.upper_search_menu:hover{
+    box-shadow: 0 0 5px #ccc; 
+    z-index: 10;
+    border-bottom: none;
+    z-index: 10;
+}
+.class_one_box .upper_search_menu_all{
+    float: right;
+    display: block;
+}
+.class_box{
+    position: absolute;
+    width: 978px;
+    height: auto;
+    padding: 5px 10px 10px;
+    border: 1px solid #B5B5B5;
+    background-color: #fff;
+    z-index: 5;
+    top: 30px;
+    box-shadow: 0 0 5px #ccc;
+    border-top: 0;
+    box-sizing: border-box;
+}
+.class_one_box{
+    left: -90px;
+    display: none;
+}
+.class_two_box{
+    left: -201px;
+    display: none;
+}
+.class_three_box{
+    left: -311px;
+    display: none;
+}
+.class_four_box{
+    left: -421px;
+    display: none;
+}
+
+.class_one_box a{
+    float: left;
+    display: block;
+    width: 90px;
+    margin-top: 5px;
+    padding: 3px 0;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.upper_sec_item{
+    float: left;
+    display: block;
+    width: 90px;
+    margin-top: 5px;
+    padding: 3px 0;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.upper_search_menu_all{
+    float: right;
+    display: block;
+    line-height: 20px;
+}
+
+.search_result{
+    width: 980px;
+    height: 14px;
+    margin-top: 15px;
+}
+.search_result b{
+    font-weight: bold;
+    color: red;
+}
+/*----------过滤器-----------*/
+.shop_filter{
+    width: 980px;
+    height: auto;
+    margin: 15px auto 0;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+.shop_filter_left{
+    width: 390px;
+    height: 38px;
+    float: left;
+}
+.shop_filter_left ul li{
+    color: #fff;
+    display: block;
+    float: left;
+}
+.shop_filter_left ul li a{
+    width: auto;
+    height: auto;
+    float: left;
+    display: block;
+    border-right: 2px solid #fff ;
+    padding: 10px 25px;
+    font-size: 12px;
+}
+.shop_filter_left ul li a:hover{
+    background: #FF7A72;
+}
+
+#shop_filter_default{
+    color: white;
+    background: #F8584F;
+}
+.shop_filter_item{
+    width: #f0f0f0;
+}
+.shop_filter_new,.shop_filter_sell{
+    background: url(../img/arrangeUpDown1.png) no-repeat right 0 ;
+}
+.shop_paginationTop{
+    float: right;
+    width: auto;
+    height: auto;
+    padding: 10px 10px 0 0;
+    font-size: 12px;
+}
+.shop_paginationAct{
+    padding: 1px 15px 0;
+    float: left;
+}
+.shop_paginationAct b{
+    font-weight: bold;
+}
+.shop_paginationAct a{
+    width: 30px;
+    height: 30px;
+    padding:0 5px;
+}
+.shop_paginationShow{
+    float: left;
+    width: auto;
+    height: auto;
+}
+/*～～～终于到了商品区域啦～～～*/
+.shop_list{
+    width: 980px;
+    height: 4000px;
+
+    overflow-x: hidden;
+}
+.goods_list{
+    width: 1000px;
+/*    margin-left: -20px;*/
+} 
+.goods_list>li{
+    width: 230px;
+    height: auto;
+    float: left;
+    display: block;
+    margin-top: 15px;
+    margin-right: 18px;
+    position: relative;
+}
+.goods_list>li>a:nth-of-type(1){
+    display: block;
+    position: relative;
+    float: left;
+    margin-bottom: 5px;
+    width: 230px;
+}
+.goods_list>li>a>img{
+    width: 100%;
+    height: 100%;
+}
+.floatTop{
+    width: 230px;
+    height: 20px;
+    background: #D31B19;
+    position: absolute;
+    top: 295px;
+    left: 0;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+}
+.goods_brand{
+    display: block;
+    width: 230px;
+    height: 20px;
+}
+.goods_account{
+    float: right;
+    width: 40px;
+    height: 18px;
+    line-height: 18px;
+    border: 1px solid #f8584f;
+    text-align: center;
+    color: #f8584f;
+    background: #fdedec;
+}   
+.goods_title{
+    width: 230px;
+    height: 20px;
+    float: left;
+    font-size: 14px;
+}
+.goods_price{
+    float: left;
+    width: 230px;
+    height: 20px;
+    overflow: hidden;
+}
+.goods_price b{
+    font-weight: 700;
+    font-size: 14px;
+}
+.goods_price b:nth-of-type(2){
+    margin-left: 10px;
+    font-weight: normal;
+}
+.colorList{
+    margin-top: 8px;
+    width: 230px;
+    float: left;
+    height: 33px;
+}
+.color_container{
+    width: 190px;
+    height: 33px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    background: white;
+}
+.color_container ul li a{
+   width: 31px;
+    height: 31px;
+    float: left;
+    display: block;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+}
+.color_container ul li a img{
+    width: 100%;
+    height: 100%;
+}
+.pagination{
+    width: 980px;
+    height: 65px;
+    position: fixed;
+    bottom: 10%;
+    left: 340px;
+    margin: 0 auto;
+}
+#pagination_list{
+    margin: 0 auto;
+    position: relative;
+    width: 400px;
+    height: 65px;
+}
+.pagination a{
+   margin: 0 0 0 8px;
+    border: 1px solid #e9e9e9;
+    background-color: #fff;
+    padding: 5px 10px;
+    height: auto;
+    color: #696969;
+    float: left;
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+}
+.pagination a:hover{
+    border: 1px solid #f8584f;
+    opacity: 0.7;
+    color: #f8584f;
+}
+.pagination .pagination_default{
+    color: #f8584f;
+    border: 1px solid #f8584f;
+}
+    
+    
+
+
+
+
+
+
+
+
+

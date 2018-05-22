@@ -108,3 +108,24 @@
     color: #D30A06;
 }
 
+/*--------------这里是导航栏-----------------*/
+#nav{width: 100%;height: 38px;font-size: 14px;font-weight: normal;line-height: 40px;border-bottom: 1px solid #f0f0f0;padding: 20px 0 0px;}
+	#navcenter{margin:0 auto;width: 1200px;background: red;}
+		.nav_box{padding-right: 17px;box-sizing: border-box;}
+		#navi{position: relative;}
+			.nav_box>li{float: left;padding: 0 18px;}
+			.nav_box>li>div>a:hover{color: #aaa;}
+			.navi_more{position: absolute;padding: 30px 0 30px;min-height: 360px;box-sizing: border-box;margin-left: -18px;box-shadow: 0 0 5px #ccc;overflow: hidden;}
+			.navi_more ul{float: left;font-size: 12px;}
+				.navi_line{
+					width: 110px;min-height: 300px;height: auto;
+					padding: 0 25px 600px;margin-bottom: -600px;
+					box-sizing: border-box;border-right: 1px solid #f0f0f0;
+					float: left;
+					font-size: 14px;}
+				.navi_subtitle{font-size: 20px;color: #d22223;display: block;text-align: center;white-space: nowrap;margin-left: -16px;margin-bottom: 5px;}
+				#navi_hot,#navi_man,#navi_woman,#navi_children,#navi_shoes,#navi_bag,#navi_others{display: none;}
+						.navi_special{display: block;width: 100px;}
+				.navi_theme{float: none;padding: 0 17px 0 0;box-sizing: border-box;position: absolute;right: 135px;}
+				.navi_theme li{float: left;padding: 0 18px;}
+				.navi_theme li a img{opacity: 1;margin-top: -10px;display: block;}
