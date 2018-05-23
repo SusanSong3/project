@@ -1,0 +1,160 @@
+/*---------------脚步--------------*/
+.foot{
+    width: 100%;
+    height: 240px;
+    margin-top: 53px;
+}   
+.foot_center{
+    width: 1200px;
+    height: 100%;
+/*    background: pink;*/
+    margin: 0 auto;
+}
+.foot_center ul{
+    width: 1200px;
+    height: 240px;
+    display: block;
+    margin-right: 1px;
+/*    background: yellow;*/
+}
+.contact{
+    float: left;
+    width: 278px;
+    height: 238px;
+    border: 1px solid #dcdcdc;
+    margin-right: -1px;
+
+/*    background: skyblue;*/
+}
+.foot_center ul li a img{
+    width: 100%;
+    height: 100%;
+}
+.cooperation{
+    float: left;
+    width: 360px;
+    height: 238px;
+    border: 1px solid #dcdcdc;
+    border-left: none;
+    background: #fafafa;
+}
+.cooperation ul{
+    width: 100%;
+}
+.cooperation ul li{
+    float: left;
+    width: 120px;
+    height: 80px;
+    text-align: center;
+   
+}
+.cooperation ul li a img{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: block;
+    margin: 14px auto 8px;
+     cursor: pointer;
+}
+.cooperation ul li p{
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+}
+/*-----各种链接-------*/
+.links{
+    width: 100%;
+    height: 299px;
+/*    background: pink;*/
+    background: url(http://s.banggo.com/pub7/images/mbshop/newImg/mbshop_bottom_guide.png?t=20160603) repeat-x;
+    
+}
+.links_center{
+    margin: 0 auto;
+    width: 1200px;
+    height: 299px;
+/*    background: yellow;*/
+}
+.links_top{
+    width: 100%;
+    height: 168px;
+/*    background: tomato;*/
+    padding-top: 11px;
+}
+.links_top dl{
+    width: 200px;
+    height: auto;
+    float: left;
+    display: block;
+}
+.links_top dl dt{
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    color: #231815;
+}
+.links_top dl dd{
+    width: 100%;
+    padding-top: 13px;
+    color: #231815;
+    font-size: 12px;
+    font-weight: normal;
+}
+.copyright{
+    height: 111px;
+    overflow: hidden;
+    float: none;
+    margin: 20px auto 0;
+    width: 100%;
+    padding: 20px 0 15px;
+    border-top: 1px solid #999;
+/*    background: tomato;*/
+}
+.copyright p{
+    margin: 0 auto;
+    width: 1200px;
+    height: auto;
+    text-align: center;
+    color: #787878;
+    font-weight: 700px;
+    font-size: 14px;
+    position: relative;
+}
+.copyright div{
+    width: 350px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+.copyright div a{
+    float: left;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    padding-right: 10px;
+    padding-top: 15px;
+}
+/*-------右侧浮动--------*/
+#float_bar{
+    width: 60px;
+    height: 155px;
+    position: fixed;
+    right: 0px;
+    bottom: 30px;
+}
+
+.backToTop{
+    display: block;
+    width: 55px;
+    height: 90px;
+    margin-bottom: 10px;
+    background: url(../img/Veo_mbshop_spirit_pic.png) no-repeat 0 -1060px;
+}
+.contactUs{
+    display: block;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 10px;
+    background: url(http://s.banggo.com/pub7/images/mbshop/common/online_service.png?t=20160603) no-repeat ;
+}
+
