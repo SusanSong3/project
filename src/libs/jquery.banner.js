@@ -68,14 +68,14 @@
 		change_index:function(event){
 			// console.log($(event))
 			var turnList = {
-				"next":function () {
-					this.prev = this.index;
-					if(this.index == this.bannerNum - 1){
-						this.index = 0;
-					}else{
-						this.index ++;
-					}
-				}.bind(this),
+				// "next":function () {
+				// 	this.prev = this.index;
+				// 	if(this.index == this.bannerNum - 1){
+				// 		this.index = 0;
+				// 	}else{
+				// 		this.index ++;
+				// 	}
+				// }.bind(this),
 				//去目标那页
 				
 				"toIndex":function () {
