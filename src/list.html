@@ -18,7 +18,337 @@
     </style>
 </head>
 <body>
-<iframe src="head.html" frameborder="0"></iframe>
+<!-- 这里是顶部导航栏-->
+<div id="topline">
+    <div id="topline_center" class="clear">
+        <p id="topline_txt">欢迎来到邦购网，全场满199元包邮</p>
+        <ul id="topline_right" class="clear">
+            <li class="topline_button" id="botton_login">
+                <a href="login.html" id="login">登录
+            <!-- 登录下拉菜单 -->
+                    <div class="topline_show" id="login_detail">
+                        <p><a href="">qq账户登录</a></p>
+                        <p><a href="">支付宝登录</a></p>
+                        <p><a href="">微信账户登录</a></p>
+                    </div>
+                </a>
+            </li>
+            <li class="topline_button" ><a href="###">注册</a></li>
+            <li class="topline_button">
+                <a href="###">我的邦购
+            <!-- 我的邦购下拉菜单 -->
+                    <div class="topline_show" >
+                        <p><a href="">我的订单</a></p>
+                        <p><a href="">我的积分</a></p>
+                        <p><a href="">我的点赞</a></p>
+                        <p><a href="">收货地址</a></p>
+                    </div>
+                </a>
+            </li>
+            <li class="topline_button "><a href="###">会员中心</a></li>
+            <li class="topline_button">
+                <a href="###"  id="qrcode">下载APP
+            <!-- 二维码 -->
+                    <div class="topline_show">
+                        <img src="http://s.banggo.com/pub1/bgweb/default/images/mbshop_pic_mobile.png">
+                    </div>
+                </a>
+            </li>
+            <li class="topline_button"><a href="###">微博</a></li>
+            <li class="topline_button topline_button_show">
+            <!-- 微信 -->
+                <a href="###"  id="wechat">微信
+                    <div class="topline_show">
+                        <img src="http://s.banggo.com/pub1/bgweb/default/images/mbshop_pic_erweima.jpg">
+                    </div>
+                </a>
+            </li>
+        </ul>	
+    </div>
+</div>
+    <div id="top_search">
+    <div id="top_search_center">
+        <!-- logo -->
+        <div id="top_logo">
+            <a href="http://www.banggo.com/">
+                <img src="http://s.banggo.com/pub7/images/mbshop/newImg/mbshop_new_logo2.png" id="logo_pic">
+            </a>
+        </div>
+        <!-- search -->
+        <div id="top_search_box">
+            <!-- 这里是搜索框 -->
+            <div id="search">
+                <form action="">
+                    <div id="searchBox">
+                        <div id="searchBox_left">
+                            <label for="search_input">
+                                <i class="iconfont"></i>
+                                <input type="text" name="search" id="search_input" placeholder="夏日上新 2件5折">
+                                <input type="submit" name="submit" id="search_submit" title="搜索" value="搜索">
+                                
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- 这里是热词点击 -->
+            <div id="top_search_hotkey">
+                <a href="###" style="color: #333;">T恤</a><span>|</span>
+                <a href="###">裙舞翩翩</a><span>|</span>
+                <a href="###" style="color: #333;">衬衫</a><span>|</span>
+                <a href="###">百搭裤装</a><span>|</span>
+                <a href="###">休闲鞋</a><span>|</span>
+            </div>
+        </div>
+        <!-- 这里是购物袋 -->
+        <div id="shopping_car" class="clear">
+            <span><a href="shoppingBag.html">购物车 <i>0</i> 件</span>
+        </div>
+    </div>
+</div>
+<!-- 这里是一个导航栏 -->
+<div id="nav">
+    <div id="navcenter">
+        <div>
+            <ul class="nav_box">
+                <li>
+                    <div class="navi"><a href="">登录</a></div>
+                </li>
+                <li>
+                    <div class="navi"><a href="">热销分类
+                        <div class="navi_more" id="navi_hot">
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">男生热门</a>
+                                <li><a href="">短袖T恤</a> </li>
+                                <li><a href="">短袖衬衫</a></li>
+                                <li><a href="">POLO</a></li>
+                                <li><a href="">长袖衬衫</a></li>
+                                <li><a href="">休闲中短裤</a></li>
+                                <li><a href="">休闲长裤</a></li>
+                                <li><a href="">牛仔裤</a></li>
+                                <li><a href="">针织裤</a></li>
+                                <li><a href="">内衣</a></li>
+                                <li><a href="">箱包</a></li>
+                                <li><a href="">鞋履</a></li>
+                            </ul>
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">女生热门</a>
+                                <li><a href="">短袖T恤</a></li>
+                                <li><a href="">连衣裙</a></li>
+                                <li><a href="">半身裙</a></li>
+                                <li><a href="">休闲中短裤</a></li>
+                                <li><a href="">牛仔中短裤</a></li>
+                                <li><a href="">内衣</a></li>
+                                <li><a href="">箱包</a></li>
+                                <li><a href="">鞋履</a></li>
+                                <li><a href="">配饰</a></li>
+                            </ul>
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">儿童热门</a>
+                                <li><a href="">短袖T恤</a></li>
+                                <li><a href="">套装</a></li>
+                                <li><a href="">裙装</a></li>
+                                <li><a href="">衬衫</a></li>
+                                <li><a href="">中短裤</a></li>
+                                <li><a href="">长裤</a></li>
+                                <li><a href="">鞋包配</a></li>
+                                <li><a href="">婴幼童</a></li>
+                            </ul>
+                        </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="navi"><a href="">男装
+                        <div class="navi_more" id="navi_man">
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">上装</a>
+                                <li><a href="">短袖T恤</a></li>
+                                <li><a href="">POLO</a></li>
+                                <li><a href="">长袖T恤</a></li>
+                                <li><a href="">夹克</a></li>
+                                <li><a href="">毛衣</a></li>
+                                <li><a href="">衬衫</a></li>
+                                <li><a href="">卫衣</a></li>
+                                <li><a href="">外套</a></li>
+                                <li><a href="">西装</a></li>
+                            </ul>
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">下装</a>
+                                <li><a href="">牛仔长裤</a></li>
+                                <li><a href="">休闲长裤</a></li>
+                                <li><a href="">西裤</a></li>
+                                <li><a href="">休闲中短裤</a></li>
+                                <li><a href="">针织长裤</a></li>
+                                <li><a href="">牛仔中短裤</a></li>
+                            </ul>
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">内衣</a>
+                                <li><a href="">内衣下装</a></li>
+                                <li><a href="">内衣上装</a></li>
+                                <li><a href="">内衣套装</a></li>
+                                <li><a href="">袜子</a></li>
+                                <li><a href="">家居服</a></li>
+                            </ul>
+                        </div>
+                        </a></div>
+                </li>
+                <li>
+                    <div class="navi"><a href="">女装
+                        <div class="navi_more" id="navi_woman">
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">上装</a>
+                                <li><a href="">短袖T恤</a></li>
+                                <li><a href="">长袖T恤</a></li>
+                                <li><a href="">长袖衬衫</a></li>
+                                <li><a href="">短袖衬衫</a></li>
+                                <li><a href="">夹克</a></li>
+                                <li><a href="">卫衣</a></li>
+                                <li><a href="">套装</a></li>
+                                <li><a href="">毛衣</a></li>
+                            </ul>
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">下装</a>
+                                <li><a href="">休闲长裤</a></li>
+                                <li><a href="">休闲中短裤</a></li>
+                                <li><a href="">牛仔短裤</a></li>
+                                <li><a href="">牛仔中短裤</a></li>
+                                <li><a href="">针织长裤</a></li>
+                                <li><a href="">针织中短裤</a></li>
+                                <li><a href="">连身裤</a></li>
+                                <li><a href="">打底裤</a></li>
+                            </ul>
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">裙装</a>
+                                <li><a href="">连衣裙</a></li>
+                                <li><a href="">半身裙</a></li>
+                            </ul>
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">内衣</a>
+                                <li><a href="">内衣上装</a></li>
+                                <li><a href="">内衣下装</a></li>
+                                <li><a href="">内衣下装</a></li>
+                                <li><a href="">家居服</a></li>
+                                <li><a href="">袜子</a></li>
+                            </ul>
+                        </div>
+                        </a></div>
+                </li>
+                <li>
+                    <div class="navi"><a href="">儿童
+                        <div class="navi_more" id="navi_children">
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">上装</a>
+                                <li><a href="">短袖T恤</a></li>
+                                <li><a href="">长袖T恤</a></li>
+                                <li><a href="">衬衫</a></li>
+                                <li><a href="">毛衣</a></li>
+                                <li><a href="">婴幼童</a></li>
+                                <li><a href="">卫衣</a></li>
+                                <li><a href="">外套</a></li>
+                            </ul>
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">下装</a>
+                                <li><a href="">长裤</a></li>
+                                <li><a href="">中短裤</a></li>
+                                <li><a href="">婴幼童</a></li>
+                            </ul>
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">连身</a>
+                                <li><a href="">裙装</a></li>
+                                <li><a href="">套装</a></li>
+                                <li><a href="">连体衣</a></li>
+                            </ul>
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">搭配</a>
+                                <li><a href="">鞋包配</a></li>
+                                <li><a href="">内衣</a></li>
+                            </ul>
+                        </div>
+                        </a></div>
+                </li>
+                <li>
+                    <div class="navi"><a href="">鞋履
+                        <div class="navi_more" id="navi_shoes">
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">人气男鞋</a>
+                                <li><a href="">休闲鞋</a></li>
+                                <li><a href="">运动鞋</a></li>
+                                <li><a href="">商务鞋</a></li>
+                                <li><a href="">帆布鞋</a></li>
+                                <li><a href="">凉鞋</a></li>
+                                <li><a href="">拖鞋</a></li>
+                                <li><a href="">男靴</a></li>
+                            </ul>
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">人气女鞋</a>
+                                <li><a href="">帆布鞋</a></li>
+                                <li><a href="">休闲鞋</a></li>
+                                <li><a href="">运动鞋</a></li>
+                                <li><a href="">凉鞋</a></li>
+                                <li><a href="">拖鞋</a></li>
+                                <li><a href="">商务鞋</a></li>
+                                <li><a href="">靴子</a></li>
+                            </ul>
+                        </div>
+                        </a></div>
+                </li>
+                <li>
+                    <div class="navi"><a href="">箱包
+                        <div class="navi_more" id="navi_bag">
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">品质男包</a>
+                                <li><a href="">双肩包</a></li>
+                                <li><a href="">斜挎包</a></li>
+                                <li><a href="">钱包/手拿包</a></li>
+                                <li><a href="">拉杆箱</a></li>
+                                <li><a href="">胸包/腰包</a></li>
+                                <li><a href="">手提包</a></li>
+                                <li><a href="">单肩包</a></li>
+                            </ul>
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">潮流女包</a>
+                                <li><a href="">双肩包</a></li>
+                                <li><a href="">手提包</a></li>
+                                <li><a href="">斜挎包</a></li>
+                                <li><a href="">钱包/手拿包</a></li>
+                                <li><a href="">单肩包</a></li>
+                                <li><a href="">其他包</a></li>
+                            </ul>
+                        </div>
+                        </a></div>
+                </li>
+                <li>
+                    <div class="navi"><a href="">配饰
+                        <div class="navi_more" id="navi_others">
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">男配饰</a>
+                                <li><a href="">腰带/皮带</a></li>
+                                <li><a href="">围巾</a></li>
+                                <li><a href="">帽子</a></li>
+                                <li><a href="">手套</a></li>
+                                <li><a href="">其他配饰</a></li>
+                            </ul>
+                            <ul class="navi_line">
+                                <a class="navi_subtitle">女配饰</a>
+                                <li><a href="">腰带</a></li>
+                                <li class="navi_special"><a href="">围巾/丝巾/披肩</a></li>
+                                <li><a href="">帽子</a></li>
+                                <li><a href="">手套</a></li>
+                            </ul>
+                        </div>
+                        </a></div>
+                </li>
+            </ul>
+            <ul class="navi_theme">
+                <li><a href="http://www.banggo.com/theme/HP20161110.shtml?avn=1blank"><img src="img/lqzx-pc.png" alt=""></a></li>
+                <li><a href="http://www.banggo.com/theme/pcxrzx.shtml?avn=1"><img src="img/xrzc-pc.jpg" alt=""></a></li>
+                <li><a href="http://point.banggo.com/point"><img src="img/jfsc-pc.png" alt=""></a></li>
+                <li><a href="http://www.banggo.com/Index/app"><img src="img/mobilegai.gif" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 <!--  从这里开始是详情页  -->
     <div id="content">
@@ -56,7 +386,7 @@
               </ul>
             </div>
           </div>
-                <div class="shop_right">
+                <div class="shop_right clear">
 <!--                   顶部过滤器-->
                     <div id="shop_top">
                         <div class="search_frame">
@@ -262,6 +592,8 @@
                     </div>
                     <div class="shop_list">
                         <ul class="goods_list">
+                            
+
                             <li class="clear goods-item">
                                 <a href="#"><img src="http://pic.banggo.com/sources/images/goods/MB/603232/603232_00.jpg?x-oss-process=image/resize,m_fill,w_300,h_410" alt=""></a>
                                 <a href="" class="floatTop">满199-39</a>
@@ -269,8 +601,8 @@
                                 <label class="goods_account">5折</label>
                                 <span class="goods_title"><a href="">女时尚英文字母玫瑰印花短袖T恤</a></span>
                                 <span class="goods_price">
-                                    <b>￥49.9</b>
-                                    <b>￥99</b>
+                                    ￥<b>49.9</b>
+                                    ￥<b>99</b>
                                 </span>
                                 <div class="colorList">
                                     <div class="color_container">
@@ -294,23 +626,23 @@
                                     </div>
                                 </div>
                             </li>
-                        </ul>
-                        <div class="pagination">
-                           <div id="pagination_list">
-    <!--                           鼠标滑过的时候opacity变为0.7-->
-                                <a href="" class="pagination_default">1</a>
-                                <a href="">2</a>
-                                <a href="">3</a>
-                                <a href="">4</a>
-                                <a href="">5</a>
-                                <a href="">6</a>
-                                <a href="">7</a>
-                                <a href="">下一页</a>
-                                <a href="">尾页</a>
-                            </div>
-                        </div>
-                    </div>
 
+                        </ul>
+                    </div>
+                    <div class="pagination">
+                        <div id="pagination_list">
+ <!--                           鼠标滑过的时候opacity变为0.7-->
+                             <a href="" class="pagination_default">1</a>
+                             <a href="">2</a>
+                             <a href="">3</a>
+                             <a href="">4</a>
+                             <a href="">5</a>
+                             <a href="">6</a>
+                             <a href="">7</a>
+                             <a href="">下一页</a>
+                             <a href="">尾页</a>
+                         </div>
+                     </div>
             </div> 
         </div>       
     </div>
@@ -391,7 +723,7 @@
         <a href="" class="backToTop"></a>
         <a href="" class="contactUs"></a>
     </div>
-    
+
     
     
     

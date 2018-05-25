@@ -465,6 +465,9 @@
     height: 20px;
     float: left;
     font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .goods_price{
     float: left;
@@ -493,6 +496,11 @@
     overflow: hidden;
     position: relative;
     background: white;
+}
+.color_container{
+    width: 190px;
+    height: 33px;
+    overflow: hidden
 }
 .color_container ul li a{
    width: 31px;

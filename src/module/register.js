@@ -1,5 +1,4 @@
 // alert(1);
-
 define(["jquery"],function($){
     //提示信息：三项输入均不能为空
 		   // 	//正则：数字字母下划线汉字
@@ -7,33 +6,30 @@ define(["jquery"],function($){
    			var reg_user = new RegExp(/^[a-zA-Z0-9]{4,20}|[\u4e00-\u9fa5]{2,10}$/);
    			var reg_phone = new RegExp(/^[0-9]{11}$/g);
    			//---> 用户名
-   			// $("#step1_username").focus(function () {
-   			// 	// console.log("no username")
-   			// }).blur(function () {
    				
-   				$username = $(this).val() ;
-   				$userNum = lenReg($username);
-   				if($username === ""){
-   					$("#mobile_user_message")
-   					.html("用户名不能为空");
-   				}
-				if(!!reg_user.test($username)){
-					$("#mobile_user_message")
-					.html("")
-					.append("<font color='green'>用户名可用</font>")
-   				}else{
-   					$("#mobile_user_message")
- 					.html("")
-   					.html("以中、英文开头，与数字、下划线组成");
-   				}
-   				if($userNum > 20 || $userNum < 4){
-   					$("#mobile_user_message")
- 					.html("")
-   					.html("用户名只能为4~20个字符,一个汉字为两个字符");
-   					return false;
-   				}
-   
-   			})
+			$username = $(this).val() ;
+			$userNum = lenReg($username);
+			if($username === ""){
+				$("#mobile_user_message")
+				.html("用户名不能为空");
+			}
+			if(!!reg_user.test($username)){
+				$("#mobile_user_message")
+				.html("")
+				.append("<font color='green'>用户名可用</font>")
+			}else{
+				$("#mobile_user_message")
+				.html("")
+				.html("以中、英文开头，与数字、下划线组成");
+			}
+			if($userNum > 20 || $userNum < 4){
+				$("#mobile_user_message")
+				.html("")
+				.html("用户名只能为4~20个字符,一个汉字为两个字符");
+				return false;
+			}
+
+
    			//---> 手机号
    			$("#step1_phoneNum").focus(function () {
    				// console.log("no phoneNum")

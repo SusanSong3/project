@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物袋</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/head.css">
+    <link rel="stylesheet" href="css/shoppingBag.css">
+    <link rel="stylesheet" href="css/head.css">
+    <link rel="stylesheet" href="css/foot.css">
+    <link rel="stylesheet" href="">
+
+</head>
+<body>
+   <!-- 这里是顶部导航栏-->
+	<div id="topline">
+		<div id="topline_center" class="clear">
+			<p id="topline_txt">欢迎来到邦购网，全场满199元包邮</p>
+			<ul id="topline_right" class="clear">
+				<li class="topline_button" id="botton_login">
+					<a href="login.html" id="login">登录
+				<!-- 登录下拉菜单 -->
+						<div class="topline_show" id="login_detail">
+							<p><a href="">qq账户登录</a></p>
+							<p><a href="">支付宝登录</a></p>
+							<p><a href="">微信账户登录</a></p>
+						</div>
+					</a>
+				</li>
+				<li class="topline_button" ><a href="###">注册</a></li>
+				<li class="topline_button">
+					<a href="###">我的邦购
+				<!-- 我的邦购下拉菜单 -->
+						<div class="topline_show" >
+							<p><a href="">我的订单</a></p>
+							<p><a href="">我的积分</a></p>
+							<p><a href="">我的点赞</a></p>
+							<p><a href="">收货地址</a></p>
+						</div>
+					</a>
+				</li>
+				<li class="topline_button "><a href="###">会员中心</a></li>
+				<li class="topline_button">
+					<a href="###"  id="qrcode">下载APP
+				<!-- 二维码 -->
+						<div class="topline_show">
+							<img src="http://s.banggo.com/pub1/bgweb/default/images/mbshop_pic_mobile.png">
+						</div>
+					</a>
+				</li>
+				<li class="topline_button"><a href="###">微博</a></li>
+				<li class="topline_button topline_button_show">
+				<!-- 微信 -->
+					<a href="###"  id="wechat">微信
+						<div class="topline_show">
+							<img src="http://s.banggo.com/pub1/bgweb/default/images/mbshop_pic_erweima.jpg">
+						</div>
+					</a>
+				</li>
+			</ul>	
+		</div>
+	</div>
+	
+<!--	logo-->
+   <div class="top">
+       <div class="top_center">
+            <div id="logo">
+                <img src="img/logo.jpg" alt="">
+            </div>
+       </div>
+   </div>
+<!--   content-->
+  <div class="content">
+      <div class="content_center clear">
+          <p class="content_title">购物车</p>
+          <a href="###">领红包，享优惠 > ></a>
+<!--          空购物车-->
+         <div class="emptyCart">
+             <img src="img/cart.png" alt="">
+             <div class="tip_box">
+                 <b>您的购物车还是空的，赶紧行动吧！您可以：</b>
+                 <p>马上去：<a href="list.html">挑选商品</a>，或查看<a href="###">我的收藏夹</a></p>
+                 <p>您可能还未登录导致购物袋的商品无法显示，马上<a href="login.html">登录</a></p>
+             </div>
+         </div>
+<!--========购物袋主体开始============-->
+         <div class="cart">
+             <div class="cart_top">
+<!--                标题栏-->
+                 <ul class="clear">
+                     <li>
+                         <input type="checkbox" id="check_all" checked>
+                         <label for="check_all"> 全选</label>
+                     </li>
+                     <li>商品信息</li>
+                     <li>颜色尺码</li>
+                     <li>单价（元）</li>
+                     <li>数量</li>
+                     <li>小计</li>
+                     <li>操作</li>
+                 </ul>
+<!--                 购物袋里的小商品～-->
+                <div class="cart_list">
+                    <div class="cart_list_top">
+                        <input type="checkbox" checked> 邦购
+                        <span>满169包邮</span>
+                    </div>
+                    <div class="cart_main">
+                        <ul class="cart_item">
+                            <li><input type="checkbox"></li>
+                        </ul>
+                    </div>
+                </div>
+             </div>
+         </div>
+<!--========购物袋主体结束============-->
+         <div class="view_history">
+             <ul>
+                 <li class="active">买了又买</li>
+                 <li>最近浏览的商品</li>
+             </ul>
+             <div class="button">
+                 <span class="history_prev"><img src="img/prev.png" alt=""></span>
+                 <span class="history_next"><img src="img/next.png" alt=""></span>
+             </div>
+         </div>
+      </div>
+  </div>
+       <!--    终于到了激动人心的脚步结构啦-->
+    <div class="foot">
+            <div class="foot_center">
+                <ul class="clear">
+                    <li class="contact"><a href=""><img src="http://s.banggo.com/pub7/images/mbshop/20150720/zyshare01.png" alt=""></a></li>
+                    <li class="contact"><a href="http://weibo.com/gobanggo"><img src="http://s.banggo.com/pub7/images/mbshop/20150720/zyshare02.png" alt=""></a></li>
+                    <li class="contact"><a href=""><img src="http://s.banggo.com/pub7/images/mbshop/20150720/zyshare03.png" alt=""></a></li>
+                    <li class="cooperation">
+                        <img src="http://img.banggo.com/sources/cms/banggo2017/PC/mjhz.jpg" alt="">
+                        <ul>
+                            <li><a href=""><img src="http://s.banggo.com/pub7/images/mbshop/20150720/indexonline.png" alt=""></a>
+                            <p>在线客服</p></li>
+                            <li><a href=""><img src="http://s.banggo.com/pub7/images/mbshop/20150720/indexopinion.png" alt=""></a>
+                            <p>意见反馈</p></li>
+                            <li><a href=""><img src="http://s.banggo.com/pub7/images/mbshop/20150720/indexsurvey.png" alt=""></a>
+                            <p>问卷调查</p></li>
+                        </ul>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="links">
+            <div class="links_center">
+                <div class="links_top">
+                    <dl>
+                        <dt>新手指南</dt>
+                        <dd><a href="register.html">注册新用户</a></dd>
+                        <dd><a href="register.html">用户协议</a></dd>
+                        <dd><a href="register.html">找回密码</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>购物指南</dt>
+                        <dd><a href="register.html">红包使用说明</a></dd>
+                        <dd><a href="register.html">购物流程</a></dd>
+                        <dd><a href="register.html">订单状态</a></dd>
+                        <dd><a href="register.html">邦购币绑定与使用</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>配送方式</dt>
+                        <dd><a href="register.html">配送范围</a></dd>
+                        <dd><a href="register.html">订单拆分</a></dd>
+                        <dd><a href="register.html">商品验货与签收</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>支付方式</dt>
+                        <dd><a href="register.html">发票制度</a></dd>
+                        <dd><a href="register.html">支付方式</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>售后服务</dt>
+                        <dd><a href="register.html">退换货政策</a></dd>
+                        <dd><a href="register.html">退换办理流程</a></dd>
+                        <dd><a href="register.html">退款说明</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>联系方式</dt>
+                        <dd><a href="register.html">在线客服</a></dd>
+                        <dd><a href="register.html">商家入驻：</a></dd>
+                        <dd><a href="register.html">bgzs@metersbonwe.com</a></dd>
+                    </dl>
+                </div>
+                <div class="copyright">
+                    <p>CopyRight © 2000-2018, 版权所有 上海美特斯邦威服饰股份有限公司 banggo.com 沪ICP备05033127号|沪ICP证B2-20150114 021-38119999</p>
+                    <div>
+                        <a href="http://www.miibeian.gov.cn/"><img src="http://s.banggo.com/pub1/bgweb/default/images/lz_beian_h40.png" alt=""></a>
+                        <a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=dov71zgzilhvn4inh27pfqd6h0hvwad254"><img src="http://s.banggo.com/pub1/bgweb/default/images/lz_shgs_h40.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--    侧边栏小火箭-->
+    <div id="float_bar">
+            <a href="" class="backToTop"></a>
+            <a href="" class="contactUs"></a>
+    </div>
+</body>
+</html>

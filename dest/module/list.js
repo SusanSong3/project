@@ -1,1 +1,1 @@
-"use strict";define(["jquery","pagination"],function(t,n){new($.fn.pagination=n)("http://bgact.banggo.com/plate/GetPlateContent?mark=index&callback=jQuery18305316835207223058_1526370479734&plate_id=777&_=1526370490477",".goods_list",".pagination")});
+"use strict";define(["jquery","pagination"],function(t,a){new a("http://bgact.banggo.com/plate/GetPlateContent?mark=index&callback=jQuery18305316835207223058_1526370479734&plate_id=777&_=1526370490477",".goods_list",".pagination")});

@@ -69,7 +69,8 @@ gulp.task('requirejs', () =>
         .pipe(gulp.dest('./dest/libs'))
 );
 // default 命令
-gulp.task('default', ['connect', 'sass:watch', 'imagemin','compress','requirejs','watch']);
+gulp.task('build', ['html','css', 'sass:watch', 'imagemin','compress','requirejs','sass']);
+gulp.task('default', ['connect','watch']);
 
 
 

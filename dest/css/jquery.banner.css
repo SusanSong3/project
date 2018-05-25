@@ -1,6 +1,6 @@
 /*这里是开发人员编写的css*/
 .myBanner-item.myBanner-active{
-	z-index: 2;
+	z-index: 100;
 }
 /*--------------轮播图 导入---------------*/
 .myBanner-container{
@@ -70,7 +70,7 @@
 .myBanner-next{
 	width: 100px;
 	height: 100px;
-	background: white;
+	background: transparent;
 	position: absolute;
 	right: 0;
 	top: 50%;

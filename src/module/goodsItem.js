@@ -12,11 +12,13 @@ define(["jquery","magnifier"],function($,magnifier){
         $(".fixed_pic img").attr("src",$(this).attr("longdesc"))    
     })
     //小图框框变颜色
-    $(".small_pic_list ul li").hover(function(){
+    $(".small_pic_list ul li").on("mouseover",function(){
         $(this).css("borderColor","#F8584F");
-    },function(){
+    }).on("mouseout",function(){
         $(this).css("borderColor","#dcdcdc");
     })
+   
+    
 
     //会员规则
     $(".member_rules").hover(function(){
@@ -34,14 +36,81 @@ define(["jquery","magnifier"],function($,magnifier){
             $(".fixed_pic img").attr("src",$(this).attr("large_src")) 
             // console.log()
             $("#colorSelected").html($(this).parent().attr("attr_value"))
+    }.bind(this));
+
+     //颜色 选中状态
+    $(".item_color_list a").each(function(){
+        $(this).on("click",function(){
+            // console.log($(this))
+            if(!($(this).hasClass("selected"))){
+                $(this)
+                .addClass("selected");
+                $(this).siblings()
+                .removeClass("selected")
+            }else{
+                $(this)
+                .removeClass("selected")
+            }
+            console.log($(this).children())
+
+            $(".big_pic img").attr("src",$(this).children().attr("mid_src"))
+            $(".fixed_pic img").attr("src",$(this).children().attr("large_src")) 
+            // console.log()
+            $("#colorSelected").html($(this).children().parent().attr("attr_value"))
+            
+
+
+
+        })
     });
-    //框框变颜色～
-    //
-    $(".item_color_list a").hover(function(){
-        $(this).css("borderColor","#F8584F");
-    },function(){
-        $(this).css("borderColor","#dcdcdc");
+    //尺码同理
+    $(".goods_size ul li").each(function(){
+        $(this).on("click",function(){
+            // console.log($(this))
+            if(!($(this).hasClass("selected"))){
+                $(this)
+                .addClass("selected");
+                $(this).siblings()
+                .removeClass("selected")
+            }else{
+                $(this)
+                .removeClass("selected")
+            }
+        })
+    });
+    //弹出警告窗：请选择颜色和尺码后再加入购物车：
+    //加入购物袋前，请先选择颜色和尺码
+   
+    $(".addToBag").on("click",function(){
+        //缺失选项时提示：
+        if(!($(".goods_size ul li").hasClass("selected")) && !($(".item_color_list a").hasClass("selected"))){
+            alert("加入购物袋前，请先选择颜色和尺码!")
+        }else if(!($(".goods_size ul li").hasClass("selected"))){
+            alert("加入购物袋前，请先选择尺码!")
+        }else if(!($(".item_color_list a").hasClass("selected"))){
+            alert("加入购物袋前，请先选择颜色!") 
+        }else{
+            //弹出层显示
+            $(".alertWindow").show();
+            $(".body_wrap").show();
+        }
+        
+        $("#keepView").on("click",function(){
+            $(".alertWindow").hide();
+            $(".body_wrap").hide();
+
+        })
+
+        //点叉
+        $("#alert_close").on("click",function(){
+            $(".alertWindow").hide();
+            $(".body_wrap").hide();
+        })
+    
     })
+        
+        
+
 
     // 尺码文字改变
     $(".goods_size ul li a").on("click",["a"],function(){
@@ -157,6 +226,7 @@ define(["jquery","magnifier"],function($,magnifier){
     }
 
     new FloatTop();
+// -------------加入购物车
 
 
 })

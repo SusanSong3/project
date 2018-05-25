@@ -20,10 +20,10 @@
         init:function(){
             this.load_data()
             .then(function(res){
-                //console.log(res);
+                console.log(res);
                 this.json = res.data["wydbm-7"].plateContent;
-
-//                console.log(this.json);
+                
+            //    console.log(this.json);
                 this.render_page();
             }.bind(this))
             this.create_btn();
@@ -40,20 +40,23 @@
             return $.ajax(opt);
         },
         render_page:function(){
-            
             var html = "";
             this.json.forEach(function(item){
                 if(item.plate_type == "6"){
+                    
                     //小图对象
-                    console.log(item.goods_list)
+                    // console.log(item.goods_list)
                     this.colorProducts = item.goods_list.colorProducts;
-//                    console.log(this.colorProducts);
+                //    console.log(this .colorProducts);
                      
                     //遍历小图数组；
-                    this.colorProducts.forEach(function(ele,index){
-//                        console.log(index)
-                       this.colorList = ele.imgUrl;
-                       //报403错误啊啊啊啊啊啊啊 好气啊啊啊啊啊啊啊！
+                    // this.colorProducts.forEach(function(ele){
+                    //     // console.log(ele)
+                    //     this.smallList += `<li>
+                    //                         <a href="javascript:void(0)"><img src="${ele.colorName}" alt=""></a>
+                    //                         </li>`;
+                    // }.bind(this))
+                   
 //                        console.log(this.colorList);
                         html +=`<li class="clear goods-item">
                                         <a href="#"><img src="${item.goods_list.imgUrl}" alt=""></a>
@@ -62,27 +65,23 @@
                                         <label class="goods_account">5折</label>
                                         <span class="goods_title"><a href="">${item.goods_list.product_name}</a></span>
                                         <span class="goods_price">
-                                            <b>${item.goods_list.sales_price}</b>
-                                            <b>${item.goods_list.market_price}</b>
+                                            ¥<b>${item.goods_list.sales_price}</b>
+                                            ¥<b>${item.goods_list.market_price}</b>
                                         </span>
                                         <div class="colorList">
                                             <div class="color_container">
-                                                   <ul>
-                                                       <li>
-                                                           <a href="javascript:void(0)"><img src="" alt=""></a>
-                                                       </li>
-
-                                                   </ul>
+                                                   <ul></ul>
                                             </div>
                                         </div>
                                     </li>`;
-                                    
-                    }.bind(this))
+ 
+                        this.item_main.html(html);
+                    
+                   
                  }
                 }.bind(this))
             
 //            console.log(html);
-            this.item_main.html(html);
         },
         create_btn:function(){
             for(var i = 0 ; i < this.pageNum ; i ++){
@@ -112,6 +111,6 @@
         }
     
     }
-    $pagination = Pagination;
+    // $pagination = Pagination;
     return Pagination;
 });

@@ -43,19 +43,19 @@
 			// this.direction = options.direction ? options.direction : "scroll";
 			this.bannerNum = this.bannerItem.length;
 			
-			this.looping = options.loop;
+			// this.looping = options.loop;
 			// console.log(this.looping)
-			this.loopTimer = null;
+			// this.loopTimer = null;
 			
 			this.pagination = $(options.pagination.el);
 			// console.log(this.pagination)
 			this.paginationItem = this.pagination.children();
-			// console.log(this.paginationItem
+			// console.log(this.paginationItem)
 			this.paginationItem.on("mouseover.changeIndex",$.proxy(this.change_index,this));
 			this.paginationItem.on("mouseover.animation",$.proxy(this.animation,this));
-			this.paginationItem.on("mouseout",function(){
-				this.looping = false;
-			}.bind(this));
+			// this.paginationItem.on("mouseout",function(){
+			// 	this.looping = false;
+			// }.bind(this));
 		
 
 			// this.nextBtn = $(options.navigation.nextEl);
@@ -66,6 +66,7 @@
 
 		},
 		change_index:function(event){
+			// console.log($(event))
 			var turnList = {
 				"next":function () {
 					this.prev = this.index;
@@ -76,37 +77,39 @@
 					}
 				}.bind(this),
 				//去目标那页
+				
 				"toIndex":function () {
 					this.prev = this.index;
-					this.index = $(event.target).parent().index();
+					this.index = $(event.currentTarget).index();
+					
 				}.bind(this),
 			};
-			if(this.looping == "true"){
-				this.loopTimer = setInterval(function(){
-					turnList["next"];
-				}.bind(this),1000)
+			// if(this.looping == "true"){
+			// 	this.loopTimer = setInterval(function(){
+			// 		turnList["next"];
+			// 	}.bind(this),1000)
 				
-			}else{
-				clearInterval(this.loopTimer)
+			// }else{
+			// 	clearInterval(this.loopTimer)
+			console.log($(event.currentTarget).index())
 				turnList["toIndex"];
-			}
+
+			// }
 			// console.log(this.index)
 		},
 		animation:function(event) {
 
-			if(this.prev == this.index) return ;
-
+			// if(this.prev == this.index) return ;
+			console.log("now"+this.index)
 			var animationList = {
 				"fade":function(){
 					animationList.slideFadeInit();
-					this.bannerItem.eq(this.index)
-					.addClass("myBanner-active")
-					.css({
-						display:"none"
-					})
-					.fadeIn()
-					.siblings()
-					.removeClass("myBanner-active");
+					console.log(this.bannerItem.eq(this.index))
+                    // this.bannerItem.eq(this.index)
+                    // .css("zIndex","100")
+                    // .fadeIn()
+                    // .siblings()
+					// .css("zIndex","0");    
 
 				}.bind(this),
 				"slideFadeInit":function () {
