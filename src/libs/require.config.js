@@ -5,7 +5,8 @@ require.config({
         "index":"./module/index",
         "list":"./module/list",
         "pagination":"./libs/jquery.pagination",
-        "magnifier":"./libs/jquery.magnifier"
+        "magnifier":"./libs/jquery.magnifier",
+        "register":"./module/register",
         // "hover":"./src/libs/jquery.hover"
     }
 })

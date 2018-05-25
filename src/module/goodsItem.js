@@ -143,6 +143,16 @@ define(["jquery","magnifier"],function($,magnifier){
         },
         borderShow(){
             $(".item_select_wrap").show();
+            $(".select_box").css({
+                "border":"1px solid #F8584F"
+            })
+            .stop()
+            .children()
+            .on("click",function(){
+                $(".select_box").css({
+                    "border":"none"
+                })
+            }.bind(this))
         }
     }
 

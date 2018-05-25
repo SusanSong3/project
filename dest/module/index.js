@@ -1,1 +1,1 @@
-"use strict";define(["jquery","banner"],function(n,e){$.fn.banner=e,$(".myBanner-container").banner(".myBanner-wrapper",{pagination:{el:".myBanner-pagination"},direction:"scroll",loop:!0}),console.log(1),$(".top").load("head.html")});
+"use strict";define(["jquery","banner"],function(n,e){new e(".myBanner-wrapper",{navigation:{prevEl:".myBanner-prev",nextEl:".myBanner-next"},pagination:{el:".myBanner-pagination"},direction:"fade",loop:!0})});

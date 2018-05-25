@@ -1,4 +1,4 @@
-5<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -64,7 +64,7 @@
                         </div>
                         <div class="login">
                             <div id="login_button">
-                                <span><a href="#">登 录</a></span>
+                                <span><a href="#" id="login">登 录</a></span>
                             </div>
                             <i><a href="#">找回密码？</a></i>
                         </div>
@@ -92,6 +92,16 @@
         <a href="http://www.banggo.com">邦购网</a>
     </div>
     
+
+    <script src="libs/require.js"></script>
+	<script>
+		require(["libs/require.config"],function(){
+			require(["register"])
+		})
+    </script>
+    
+
+
     <script src="libs/jquery-3.3.1.js"></script>
    <script>
         $(function () {
@@ -151,6 +161,22 @@
             }).blur(function () {
                 $(".tips").hide();
             })
+
+            $("#login").on("click",function(){
+                //把登陆信息交给后台验证;
+                var username = $("#usr").val();
+                var pwd = $("#pwd").val();
+                var opt = {
+                    url:"http://localhost/GP6/0516/user.php",
+                    type:"POST",
+                    data:{username:username,password:pwd,type:"register"}
+                }
+                $.ajax(opt)
+                .then(function(res){
+                    console.log(res);
+                })
+            })
+
 
             
 

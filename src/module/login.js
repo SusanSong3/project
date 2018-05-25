@@ -69,8 +69,25 @@ $(function () {
             }.bind(this));
                 
             $choice_tips = $choice.next().find(".tips");
-
             $tip = $choice_tips.eq(1);
+            
+            //连接数据库
+            $("#login").on("click",function(){
+                //把登陆信息交给后台验证;
+                var username = $("#id_user").val();
+                var pwd = $("#id_pwd").val();
+                var opt = {
+                    url:"http://localhost:8888/php/select.php",
+                    type:"POST",
+                    data:{username:username,password:pwd}
+                }
+                $.ajax(opt)
+                .then(function(res){
+                    console.log(res);
+                })
+            })
+
+
             
 
         })

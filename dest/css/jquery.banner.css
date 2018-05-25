@@ -1,90 +1,80 @@
 /*这里是开发人员编写的css*/
-.myBanner-container{
-	height: 750px;
-	width: 100%;
-	margin: 0 auto;
-	position: relative;
-}
-.myBanner-wrapper{
-	width: 1120px;
-	height: 400px;
-	position: relative;
-	overflow: hidden;
-}
-.myBanner-item{
-	width: 1120px;
-	height: 400px;
-	position: absolute;
-	text-align: center;
-	line-height: 400px;
-	font-size: 100px;
-	background: #fff;
-	box-sizing: border-box;
-	/*border: 5px solid #000;*/
-}
 .myBanner-item.myBanner-active{
 	z-index: 2;
 }
-/*-----分页器------*/
-/*
+/*--------------轮播图 导入---------------*/
+.myBanner-container{
+	width: 100%;
+	height: 750px;
+	overflow: hidden;
+	border-top: 1px solid #f0f0f0;
+	position: relative;
+	background: white;
+}
+.myBanner-wrapper{
+	width: 100%;
+	overflow: hidden;
+	height: 600px;
+}
+.myBanner-item{
+	width: 100%;
+	height: 600px;
+	position: absolute;
+	box-sizing: border-box;
+}
+.myBanner-item>a>img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+/*-----------分页器-------*/
 .myBanner-pagination{
 	width: 1198px;
 	height: 150px;
-	z-index: 999;
-	background: red;
 	margin: 0 auto;
-	position: absolute;
-	top: 450px;
+	/* background: pin k; */
+	position: relative;
 }
-.myBanner-pagination .extra-wrapper{
-	display: inline-block;
-	height: 219px;
-	width: 110px;
+.pagination-item{
+	width: 219px;
+	height: 110px;
+	/* background: pink; */
+	margin: 20px 10px;
 	float: left;
-	margin:20px 0;
-	padding: 0 10px;
-
 }
-.myBanner-pagination .extra-wrapper.myBanner-active{
-	position: absolute;
-	width: 220px;
+.myBanner-pagination img{
+	width: 219px;
 	height: 110px;
-	background: rgba(0,0,0,.3);
-	z-index: 999;
-	top: 0;
-	left: 10px;
+	float: left;
+	display: block;
 }
-.myBanner-pagination .extra-wrapper:first-child{
+.pagination-wrap{
 	position: absolute;
-	width: 220px;
+	background: rgba(0, 0, 0, 0.3);
+	width: 219px;
 	height: 110px;
-	background: rgba(0,0,0,0);
-	z-index: 999;
-	top: 0;
-	left: 10px;
 }
-*/
-/*左右按钮*/
-/*
-.myBanner-prev,.myBanner-next{
-	height: 60px;
-	width: 40px;
-	background: red;
-	position: absolute;
-	z-index: 999;
+.pagination-wrap:hover{
+	background: rgba(0, 0, 0, 0);
 }
+/* -------------按钮--------- */
 .myBanner-prev{
+	width: 100px;
+	height: 100px;
+	background: transparent;
+	position: absolute;
 	left: 0;
-	top:50%;
-	margin-top: -30px;
+	top: 50%;
+	z-index: 10;
 }
 .myBanner-next{
+	width: 100px;
+	height: 100px;
+	background: white;
+	position: absolute;
 	right: 0;
 	top: 50%;
-	margin-top: -30px;
+	z-index: 10;
 }
-*/
-
-
 
 

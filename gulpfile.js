@@ -10,7 +10,7 @@ babel = require('gulp-babel');
 gulp.task('connect', () => {
     connect.server({
         root: 'dest',
-        port: 8888,
+        port: 8000,
         livereload: true
     })
 });
@@ -28,7 +28,7 @@ gulp.task('css', () => {
 });
 // sass文档流
 gulp.task('sass', () => {
-    return gulp.src('./src/sass/**/*.scss')
+    return gulp.src('./src/sass/*.scss')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('./dest/css'));
 });
@@ -69,7 +69,7 @@ gulp.task('requirejs', () =>
         .pipe(gulp.dest('./dest/libs'))
 );
 // default 命令
-gulp.task('default', ['connect', 'watch', 'sass:watch', 'imagemin','compress','requirejs']);
+gulp.task('default', ['connect', 'sass:watch', 'imagemin','compress','requirejs','watch']);
 
 
 

@@ -1,18 +1,20 @@
+// alert(1);
+define(["jquery","banner"],function(jq,banner){
+    // console.log($);
+    // console.log(myBanner);
+    // $.fn.banner=myBanner;
 
-define(["jquery","banner"], function (jq,myBanner) {
-   // console.log(myBanner);
-    //把返回的构造函数 添加到 $ 的原型上；这样就可以用jquery调用啦～～～  感谢韩丹大佬！
-    $.fn.banner=myBanner;
-    $(".myBanner-container").banner(".myBanner-wrapper",{
+    // console.log(jq)
+    
+   new banner(".myBanner-wrapper",{
+        navigation:{
+            prevEl:".myBanner-prev",
+            nextEl:".myBanner-next"
+        },
         pagination:{
             el:".myBanner-pagination"
         },
-        direction:"scroll",
+        direction:"fade",
         loop:true
     }); 
-
-    console.log(1)
-    $(".top").load("head.html");
-    
-    
-});
+})
